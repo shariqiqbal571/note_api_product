@@ -1,0 +1,59 @@
+
+local server
+npm i express
+
+
+run server
+ npm run serve
+ npm run dev
+
+
+database connection 
+
+pkg
+
+https://www.npmjs.com/package/mongoose
+ npm i mongoose
+
+
+Create a model database
+
+nline Diagram Software
+https://app.diagrams.net/
+
+ const mongoose = require('mongoose');
+
+ const productSchema = mongoose.Schema(
+    {
+        name:{
+            type: String,
+            required: [true, "Pleace enter a product name"]
+
+        },
+        Quantity:{
+            type: Number,
+            required: true,
+            default: 0
+        },
+        Price: {
+            type: Number,
+            required: true,
+        },
+        image: {
+            type: String,
+            required: false,
+        }
+    },
+    {
+        timestamps: true
+    }
+ )
+
+ const Product = mongoose.model('Product',productSchema);
+
+ module.exports =Product;
+
+
+
+
+use a model to save databaase in mongodb
